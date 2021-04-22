@@ -9,7 +9,7 @@
 {{- define "content" -}}
     <div class="page archive">
         {{- /* Title */ -}}
-        <h2 class="single-title pulse faster">
+        <h2 class="single-title">
             {{- $taxonomy := .Data.Singular -}}
             {{- printf "%v - %v" (T $taxonomy | default $taxonomy) .Title -}}
         </h2>

@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "uBlogger theme source file",
   "private": true,
-  "dependencies": {},
   "devDependencies": {
     "@babel/cli": "^7.12.16",
     "@babel/core": "^7.9.0",

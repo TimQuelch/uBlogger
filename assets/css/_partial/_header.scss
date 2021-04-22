@@ -2,7 +2,6 @@
   width: 100%;
   z-index: 150;
   background-color: $header-background-color;
-  @include transition(box-shadow 0.3s ease);
 
   [theme=dark] & {
     background-color: $header-background-color-dark;
@@ -20,10 +19,6 @@
 
   .header-title-post {
     padding-left: .25rem;
-  }
-
-  &:hover {
-    @include box-shadow(0 0 1.5rem 0 rgba(0, 0, 0, .1));
   }
 }
 
@@ -60,84 +55,6 @@
 
   &:hover {
     cursor: pointer;
-  }
-}
-
-.search {
-  position: relative;
-
-  input {
-    color: transparent;
-    box-sizing: border-box;
-    height: 2.5rem;
-    width: 2.5rem;
-    @include border-radius(.5rem);
-    border: none;
-    outline: none;
-    background-color: $header-background-color;
-    vertical-align: baseline !important;
-    @include transition(width 0.3s ease);
-
-    [theme=dark] & {
-      background-color: $header-background-color-dark;
-    }
-  }
-
-  @include placeholder(transparent);
-
-  .search-button {
-    margin: 0;
-    position: absolute;
-    left: auto;
-    right: 1rem;
-  }
-
-  .search-toggle {
-    left: .5rem;
-    right: auto;
-  }
-
-  .search-loading {
-    display: none;
-  }
-
-  .search-clear {
-    display: none;
-  }
-
-  .open &, &.mobile {
-    input {
-      color: $global-font-color;
-      background-color: $search-background-color;
-      padding: 0 2rem 0 2rem;
-    }
-
-    [theme=dark] & {
-      input {
-        color: $global-font-color-dark;
-        background-color: $search-background-color-dark;
-      }
-
-      @include placeholder($global-font-secondary-color-dark);
-    }
-
-    @include placeholder($global-font-secondary-color);
-
-    .search-button {
-      color: $global-font-secondary-color;
-
-      [theme=dark] & {
-        color: $global-font-secondary-color-dark;
-      }
-    }
-
-    .search-clear:hover {
-      color: #ff6b6b;
-    }
-
-    .search-toggle:hover {
-      cursor: default;
-    }
   }
 }
 

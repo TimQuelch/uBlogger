@@ -13,7 +13,7 @@
 
     <div class="page archive">
         {{- /* Title */ -}}
-        <h2 class="single-title pulse faster">
+        <h2 class="single-title">
             {{- .Params.Title | default (T $taxonomies) | dict "Some" | T $taxonomies -}}
         </h2>
 

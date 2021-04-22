@@ -169,7 +169,7 @@
 
                     <div class="post-all-meta">
                         {{ partial "breadcrumbs.html" . | safeHTML }}
-                        <h1 class="single-title flipInX">{{ $.Title }}</h1>
+                        <h1 class="single-title">{{ $.Title }}</h1>
                         {{- /* Subtitle */ -}}
                         {{- with $params.subtitle -}}
                         <h2 class="single-subtitle">{{ . }}</h2>
@@ -286,25 +286,6 @@
 
     {{- if not $params.hiddenUnderPost -}}
         {{- partial "under-post.html" . -}}
-    {{- end -}}
-
-    {{- $comment := .Site.Params.Comment  -}}
-    {{- if ($params.comment.enable | default $comment.enable) -}}
-    <section class="page single comments content-block-position">
-        <h1 class="display-hidden">Комментарии</h1>
-        {{- $authorComment := $params.authorComment -}}
-        {{- if $authorComment -}}
-        {{- with $author -}}
-        <div class="author-comment">
-            <div class="author-avatar author-avatar-comment" style="float: left"><a href="{{ with .link }} {{- . | safeHTML -}}{{ end }}" target="_blank"><img alt="{{ .full_name }}" src="{{ with .avatar }} {{- . | safeHTML -}}{{ end }}"></a></div>
-            <div class="name">{{ .full_name }}</div>
-            <div class="author-comment-text">{{ $authorComment }}</div>
-        </div>
-        {{- end -}}
-        {{- end -}}
-        {{- /* Comment */ -}}
-        {{- partial "comment.html" . -}}
-    </section>
     {{- end -}}
 </div>
 
